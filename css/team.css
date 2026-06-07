@@ -1,68 +1,98 @@
+/* ===== TEAM SECTION ===== */
+
 .team {
-    background: var(--cloud);
+    background: #f4f4fd;
 }
+
+/* ===== TEAM LIST ===== */
+/* Mobile: single column, centered */
 
 .our-team {
-    list-style: none;
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
 }
 
-.title-2 {
-    font-family: 'Raleway';
-    margin-bottom: 72px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11111;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: var(--navy-blue);
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+    .our-team {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 64px 24px;
+    }
 }
+
+/* Desktop: 4 columns */
+@media (min-width: 1158px) {
+    .our-team {
+        flex-wrap: nowrap;
+        gap: 24px;
+        justify-content: flex-start;
+    }
+}
+
+/* ===== TEAM CARD ===== */
 
 .team-container {
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-    background: var(--white);
+    width: 264px;
+    background: #ffffff;
     border-radius: 0 0 4px 4px;
     overflow: hidden;
-    flex-basis: calc((100% - 72px) / 4);
+    box-shadow:
+        0 2px 1px 0 rgba(46, 47, 66, 0.08),
+        0 1px 1px 0 rgba(46, 47, 66, 0.16),
+        0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-.team-container img{
-    width: 264px;
+@media (min-width: 768px) {
+    .team-container {
+        flex-basis: calc((100% - 24px) / 2);
+        max-width: 264px;
+    }
+}
+
+@media (min-width: 1158px) {
+    .team-container {
+        flex-basis: calc((100% - 72px) / 4);
+        max-width: none;
+    }
+}
+
+/* ===== TEAM IMAGE ===== */
+
+.team-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* ===== TEAM TEXT BLOCK ===== */
+
+.team-text {
+    padding: 32px 16px;
+    text-align: center;
 }
 
 .team-container h3 {
-    font-family: 'Raleway';
-    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    text-align: center;
-    color: var(--navy-blue);
+    color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .team-container p {
-    font-family: 'Raleway';
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    text-align: center;
-    color: var(--slate);
-}
-
-.team-text {
-    padding: 32px 16px;
-}
-
-.team-text p {
+    color: #434455;
     margin-bottom: 8px;
 }
 
-.social-link svg {
-    fill: #f4f4fd;
-}
+/* ===== SOCIAL LINKS ===== */
 
 .footer-social-list {
     display: flex;
@@ -71,6 +101,10 @@
     padding: 0;
     margin: 0;
     list-style: none;
+}
+
+.social-link svg {
+    fill: #f4f4fd;
 }
 
 .team .social-link {

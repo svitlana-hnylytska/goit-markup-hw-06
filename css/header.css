@@ -1,55 +1,63 @@
+/* ===== HEADER ===== */
+
 .header {
-    background: var(--white);
+    background: #ffffff;
     border-bottom: 1px solid #e7e9fc;
 }
 
 .header .container {
     display: flex;
     align-items: center;
+    height: 56px;
 }
 
-.nav-link.current {
-    color: #404bbf;
+@media (min-width: 768px) {
+    .header .container {
+        height: 72px;
+    }
 }
 
-.nav-link {
-    position: relative;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-link.current::after {
-    content: "";
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 4px;
-
-    background-color: #404bbf;
-    border-radius: 2px;
-}
+/* ===== LOGO ===== */
 
 .logo {
     font-family: 'Raleway', sans-serif;
-    margin-right: 76px;
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.33;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--navy-blue);
+    color: #2e2f42;
+    padding: 16px 0;
 }
 
 .logo > span {
-    color: var(--iris);
+    color: #4d5ae5;
 }
 
-.logo:hover,
-.logo:focus {
-    color: var(--navy-blue);
+@media (min-width: 768px) {
+    .logo {
+        margin-right: 120px;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1158px) {
+    .logo {
+        margin-right: 76px;
+    }
+}
+
+/* ===== NAVIGATION ===== */
+
+nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    nav {
+        display: block;
+    }
 }
 
 .navigation {
@@ -63,8 +71,9 @@
     padding: 24px 0;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--navy-blue);
+    color: #2e2f42;
     text-decoration: none;
+    display: block;
 }
 
 .navigation a:hover,
@@ -72,25 +81,99 @@
     color: #404bbf;
 }
 
+.nav-link {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link.current {
+    color: #404bbf;
+}
+
+.nav-link.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+}
+
+/* ===== CONTACTS ===== */
+
+address {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    address {
+        display: block;
+        margin-left: auto;
+        font-style: normal;
+    }
+}
+
 .contacts {
     display: flex;
-    gap: 40px;
-    font-style: normal;
-    margin-left: auto;
-    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 0;
+}
+
+@media (min-width: 1158px) {
+    .contacts {
+        flex-direction: row;
+        gap: 40px;
+        padding: 0;
+    }
 }
 
 .contacts a {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--slate);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #434455;
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 1158px) {
+    .contacts a {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
 }
 
 .contacts a:hover,
 .contacts a:focus {
     color: #404bbf;
+}
+
+/* ===== BURGER BUTTON ===== */
+
+.burger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.burger-btn svg {
+    fill: #2e2f42;
+}
+
+@media (min-width: 768px) {
+    .burger-btn {
+        display: none;
+    }
 }
