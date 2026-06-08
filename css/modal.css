@@ -35,8 +35,7 @@
 .modal {
     position: relative;
 
-    width: calc(100% - 32px);
-    max-width: 392px;
+    width: 288px;
     min-height: 584px;
 
     padding: 72px 16px 24px;

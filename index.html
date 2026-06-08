@@ -35,12 +35,9 @@
             </ul>
         </address>
 
-        <!-- Burger button (mobile only) -->
         <button type="button" class="burger-btn" aria-label="Open menu">
-            <svg width="24" height="24" viewBox="0 0 24 24">
-                <rect y="4" width="24" height="2" fill="#2e2f42"/>
-                <rect y="11" width="24" height="2" fill="#2e2f42"/>
-                <rect y="18" width="24" height="2" fill="#2e2f42"/>
+            <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-menu"></use>
             </svg>
         </button>
     </div>
@@ -110,7 +107,7 @@
                 <li class="team-container">
                     <img
                         src="./images/team-1.jpg"
-                        srcset="./images/team-1.jpg 1x, ./images/team-1@2x.jpg 2x"
+                        srcset="./images/team-1.jpg 1x, ./images/team-1.jpg 2x"
                         width="264"
                         alt="Mark Guerrero - Product Designer"
                     >
@@ -128,7 +125,7 @@
                 <li class="team-container">
                     <img
                         src="./images/team-2.jpg"
-                        srcset="./images/team-2.jpg 1x, ./images/team-2@2x.jpg 2x"
+                        srcset="./images/team-2.jpg 1x, ./images/team-2.jpg 2x"
                         width="264"
                         alt="Tom Ford - Frontend Developer"
                     >
@@ -146,7 +143,7 @@
                 <li class="team-container">
                     <img
                         src="./images/team-3.jpg"
-                        srcset="./images/team-3.jpg 1x, ./images/team-3@2x.jpg 2x"
+                        srcset="./images/team-3.jpg 1x, ./images/team-3.jpg 2x"
                         width="264"
                         alt="Camila Garcia - Marketing"
                     >
@@ -164,7 +161,7 @@
                 <li class="team-container">
                     <img
                         src="./images/team-4.jpg"
-                        srcset="./images/team-4.jpg 1x, ./images/team-4@2x.jpg 2x"
+                        srcset="./images/team-4.jpg 1x, ./images/team-4.jpg 2x"
                         width="264"
                         alt="Daniel Wilson - UI Designer"
                     >
@@ -192,7 +189,7 @@
                     <div class="portfolio-thumb">
                         <img
                             src="./images/portfolio-1.jpg"
-                            srcset="./images/portfolio-1.jpg 1x, ./images/portfolio-1@2x.jpg 2x"
+                            srcset="./images/portfolio-1.jpg 1x, ./images/portfolio-1.jpg 2x"
                             alt="Banking App"
                         >
                         <p class="portfolio-overlay">Banking App — a modern solution for managing personal finances with intuitive UX design.</p>
@@ -206,7 +203,7 @@
                     <div class="portfolio-thumb">
                         <img
                             src="./images/portfolio-2.jpg"
-                            srcset="./images/portfolio-2.jpg 1x, ./images/portfolio-2@2x.jpg 2x"
+                            srcset="./images/portfolio-2.jpg 1x, ./images/portfolio-2.jpg 2x"
                             alt="Cashless Payment"
                         >
                         <p class="portfolio-overlay">Cashless Payment — seamless digital payment marketing strategy for modern consumers.</p>
@@ -220,7 +217,7 @@
                     <div class="portfolio-thumb">
                         <img
                             src="./images/portfolio-3.jpg"
-                            srcset="./images/portfolio-3.jpg 1x, ./images/portfolio-3@2x.jpg 2x"
+                            srcset="./images/portfolio-3.jpg 1x, ./images/portfolio-3.jpg 2x"
                             alt="Meditation App"
                         >
                         <p class="portfolio-overlay">Meditation App — a calming digital experience designed for mindfulness and daily wellness.</p>
@@ -234,7 +231,7 @@
                     <div class="portfolio-thumb">
                         <img
                             src="./images/portfolio-4.jpg"
-                            srcset="./images/portfolio-4.jpg 1x, ./images/portfolio-4@2x.jpg 2x"
+                            srcset="./images/portfolio-4.jpg 1x, ./images/portfolio-4.jpg 2x"
                             alt="Taxi Service"
                         >
                         <p class="portfolio-overlay">Taxi Service — marketing campaign for an urban mobility brand targeting city commuters.</p>
@@ -248,7 +245,7 @@
                     <div class="portfolio-thumb">
                         <img
                             src="./images/portfolio-5.jpg"
-                            srcset="./images/portfolio-5.jpg 1x, ./images/portfolio-5@2x.jpg 2x"
+                            srcset="./images/portfolio-5.jpg 1x, ./images/portfolio-5.jpg 2x"
                             alt="Screen Illustrations"
                         >
                         <p class="portfolio-overlay">Screen Illustrations — a collection of digital artwork crafted for engaging UI experiences.</p>
@@ -262,7 +259,7 @@
                     <div class="portfolio-thumb">
                         <img
                             src="./images/portfolio-6.jpg"
-                            srcset="./images/portfolio-6.jpg 1x, ./images/portfolio-6@2x.jpg 2x"
+                            srcset="./images/portfolio-6.jpg 1x, ./images/portfolio-6.jpg 2x"
                             alt="Online Courses"
                         >
                         <p class="portfolio-overlay">Online Courses — digital marketing for an e-learning platform aimed at skill-building.</p>
@@ -379,13 +376,14 @@
 
     <!-- ===== MOBILE MENU ===== -->
     <div class="mobile-menu" id="mobile-menu">
-        <button type="button" class="mobile-menu-close" aria-label="Close menu">
-            <svg width="8" height="8">
-                <use href="./images/icons.svg#icon-close"></use>
-            </svg>
-        </button>
 
         <div class="mobile-menu-inner">
+            <button type="button" class="mobile-menu-close" aria-label="Close menu">
+                <svg width="8" height="8">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+
             <nav class="mobile-menu-nav">
                 <ul>
                     <li><a href="./index.html" class="current">Studio</a></li>
